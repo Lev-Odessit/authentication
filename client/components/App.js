@@ -1,10 +1,14 @@
 import React from 'react';
-import Greetings from './Greetings';
+import NavigationBar from './NavigationBar';
+import Routes from './routes';
 
 class App extends React.Component {
 	render() {
 		return (
-			<Greetings />
+			<div className="container">
+				<NavigationBar />
+				<Routes />
+			</div>
 		);
 	}
 }
