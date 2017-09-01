@@ -32,6 +32,8 @@
   },
   "dependencies": {
     "express": "^4.15.4",
+    "google-timezones-json": "^1.0.1",
+    "lodash": "^4.17.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   }
