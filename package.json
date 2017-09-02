@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Lev-Odessit/authentication#readme",
   "devDependencies": {
+    "axios": "^0.16.2",
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
@@ -35,6 +36,9 @@
     "google-timezones-json": "^1.0.1",
     "lodash": "^4.17.4",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
   }
 }
