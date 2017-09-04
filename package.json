@@ -32,13 +32,17 @@
     "webpack-hot-middleware": "^2.18.2"
   },
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "classnames": "^2.2.5",
     "express": "^4.15.4",
     "google-timezones-json": "^1.0.1",
     "lodash": "^4.17.4",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "validator": "^8.1.0"
   }
 }

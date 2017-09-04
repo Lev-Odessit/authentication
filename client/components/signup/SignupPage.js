@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import SignupForm from './SignupForm';
 import { connect } from 'react-redux';
-import { userSignupRequest } from '../../actions/signupActions'
+import { userSignupRequest } from '../../actions/signupActions';
 
 class SignupPage extends React.Component {
 	render() {
@@ -17,7 +18,7 @@ class SignupPage extends React.Component {
 }
 
 SignupPage.propTypes = {
-	userSignupRequest: React.PropTypes.func.isRequired
+	userSignupRequest: PropTypes.func.isRequired
 };
 
 export default connect(null, { userSignupRequest } )(SignupPage);
