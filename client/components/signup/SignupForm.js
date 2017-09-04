@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import map from 'lodash/map';
 import classnames from 'classnames';
 import timezones from 'google-timezones-json';
+import { withRouter } from 'react-router-dom';
 
 import TextFieldGroup from '../common/TextFieldGroup';
 import validateInput from '../../../server/shared/validations/signup';
@@ -44,11 +45,15 @@ class SignupForm extends React.Component {
 
 		if(this.isValid()) {
 			this.setState({errors: {}, isLoading: true});
-			this.props.userSignupRequest(this.state).then(
-				() => {
-				},
-				(err) => this.setState({errors: err.response.data, isLoading: false})
-			);
+			this.props.userSignupRequest(this.state)
+				.then(
+					() => {
+						this.props.history.push('/');
+					},
+					(err) => {
+						this.setState({errors: err.response.data, isLoading: false});
+					}
+				);
 		}
 	}
 
@@ -84,6 +89,7 @@ class SignupForm extends React.Component {
 					onChange={this.onChange}
 					value={this.state.password}
 					field="password"
+					type="password"
 				/>
 
 				<TextFieldGroup
@@ -92,6 +98,7 @@ class SignupForm extends React.Component {
 					onChange={this.onChange}
 					value={this.state.passwordConfirmation}
 					field="passwordConfirmation"
+					type="password"
 				/>
 
 				<div className={classnames("form-group", { 'has-error': errors.username })}>
@@ -122,4 +129,4 @@ SignupForm.propTypes = {
 	userSignupRequest: PropTypes.func.isRequired
 };
 
-export default SignupForm;
+export default withRouter(SignupForm);
